@@ -27,4 +27,8 @@
 # Local History for Visual Studio Code
 .history/
 
+# para el texto de la web
+
+texto-de-referencia.txt
+
 # End of https://mrkandreev.name/snippets/gitignore-generator/#Git,Sass,VisualStudioCode
