@@ -149,6 +149,24 @@ main {
                 }
             }
         }
+    
+    .about {
+      margin: 24px 0;
+      ul {
+        @include displayflex(row, wrap, center, center);
+        gap: 20px;
+        li {
+          width: min(100%, 320px);
+          list-style: none;
+          @include displayflex(column, nowrap, space-evenly, center);
+          align-items: center;
+          object-fit: cover;
+          p {
+            text-align: center
+          }
+        };
+      }
+    }
 
     .images-transicion {
             background-image: url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80);
@@ -287,18 +305,6 @@ main {
         
       }
       
-        
-    
-    .mision {
-            background-color: #000;
-            width: auto;
-            height: 200px;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-    }
 }
 
     
