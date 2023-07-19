@@ -93,16 +93,24 @@ nav .icon li a svg {
 }
 
 main .introduccion {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 50%));
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-content: center;
+  align-items: center;
   gap: 20px;
   padding: 0 45px 0 45px;
   margin: 28px 0;
 }
-main .introduccion p {
+main .introduccion .info {
+  position: relative;
+  z-index: 2;
+}
+main .introduccion .info p {
   text-indent: 8px;
 }
-main .introduccion button {
+main .introduccion .info button {
   border: none;
   background: #ebb7ce;
   font-size: 1.2rem;
@@ -112,7 +120,8 @@ main .introduccion button {
   margin-top: 56px;
 }
 main .introduccion figure {
-  place-self: center;
+  position: relative;
+  z-index: 1;
 }
 main .introduccion figure img {
   position: relative;
@@ -287,4 +296,16 @@ footer .redes-sociales ul {
   align-content: center;
   padding-bottom: 20px;
   gap: 40px;
+}
+
+@media (max-width: 910px) {
+  main .introduccion {
+    margin: 0;
+    padding: 0;
+  }
+  main .introduccion .info {
+    background-color: rgba(0, 0, 0, 0.9);
+    position: absolute;
+    padding: 28px 0;
+  }
 }/*# sourceMappingURL=main.css.map */
