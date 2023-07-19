@@ -111,199 +111,210 @@ nav {
 
 main {
     
-    .introduccion {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(120px,50%));
-        gap: 20px;
-        padding: 0 45px 0 45px;
-        margin: 28px 0;
+  .introduccion {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(120px,50%));
+      gap: 20px;
+      padding: 0 45px 0 45px;
+      margin: 28px 0;
 
-        p {
-            text-indent: 8px;
-        }
-
-        button {
-            border: none;
-            background: $pink;
-            font-size: 1.2rem;
-            width: 130px;
-            height: 40px;
-            border-radius: 24px;
-            margin-top: 56px;
-        }
-
-        figure {
-            place-self: center;
-
-                img {
-                    position: relative;
-                    z-index: 11;
-                }
-
-                .sombra {
-                    width: 300px;
-                    height: 12px;
-                    border-radius: 50%;
-                    box-shadow: 0px -32px 20px 0px #000;
-                    z-index: 10;
-                }
-            }
-        }
-    
-    .about {
-      margin: 24px 0;
-      ul {
-        @include displayflex(row, wrap, center, center);
-        gap: 20px;
-        li {
-          width: min(100%, 320px);
-          list-style: none;
-          @include displayflex(column, nowrap, space-evenly, center);
-          align-items: center;
-          object-fit: cover;
-          p {
-            text-align: center
-          }
-        };
+      p {
+          text-indent: 8px;
       }
-    }
 
-    .images-transicion {
-            background-image: url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80);
-            height: 245px;
-            background-size: cover;
-            width: auto;
-            margin: 24px 0;
-            background-position-y: -156px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+      button {
+          border: none;
+          background: $pink;
+          font-size: 1.2rem;
+          width: 130px;
+          height: 40px;
+          border-radius: 24px;
+          margin-top: 56px;
+      }
 
-            &::before {
-                content: "";
-                position: relative;
-                width: 100%;
-                height: 100%;
-                background-color: rgba(0, 0, 0, 0.5);
-              }
-            
-            h1 {
-            position: absolute;
-            text-indent: 0px;
-            }
-        
-    }
-    
-    .computadoras {
-        .productos {
-        @extend %scroll;
-          .card {
-            @extend %card;
-            margin: 0 4%;
-      
-            .corazon {
-                display: block;
-                position: relative;
-                display: flex
-                transform translatex(-12px);
-                z-index: 32;
-            
-                justify-content: flex-end;
-      
-              &:hover {
-                background: #6c6c6c8f;
-                border-radius: 50%;
-                width: 36px;
-                height: 36px;
-              }
-            }
-      
-            svg {
-              display: inline;
-              position: relative;
-              right: -7.25px;
-              bottom: -6px;
-              fill: $pink;
-            }
-      
-            .card-image {
-              position: relative;
-              z-index: 30;
-              width: 100%;
-              height: 120px;
-              overflow: hidden;
-              border-radius: 12px 12px 0 0;
-              transform: translateY(-24px);
-      
+      figure {
+          place-self: center;
+
               img {
-                width: 100%;
-                height: auto;
-                position: relative;
-                z-index: 31;
+                  position: relative;
+                  z-index: 11;
               }
-            }
-      
-            .card-content {
-              padding: 10px;
-              color: white;
-              width: 100%;
-              height: 122px;
-              overflow-y: scroll;
-              transform: translateY(-26.1px);
-      
-              h3 {
-                font-weight: bolder;
-                display: inline;
-              }
-      
-              p {
-                margin: 0;
-                font-size: 14px;
-                line-height: 1.2;
-              }
-            }
-          }
-        }
-      }
-      
-      .oficinas {
-        
 
-        .oficinas__contenedor {
-            @include displayflex(row, wrap,space-evenly, center);
-            .oficina {
-          @extend %card;
-          background-image: url("https://img.freepik.com/foto-gratis/computadora-portatil-abierta_144627-12145.jpg?w=740&t=st=1689726663~exp=1689727263~hmac=bd0a4bd06d25877b063a376e72c969e6dfcd1505d88e7acf58109c3b75c4232d");
+              .sombra {
+                  width: 300px;
+                  height: 12px;
+                  border-radius: 50%;
+                  box-shadow: 0px -32px 20px 0px #000;
+                  z-index: 10;
+              }
+          }
+      }
+  
+  .about {
+    margin: 24px 0;
+    ul {
+      @include displayflex(row, wrap, center, center);
+      gap: 20px;
+      li {
+        width: min(100%, 320px);
+        list-style: none;
+        @include displayflex(column, nowrap, space-evenly, center);
+        align-items: center;
+        object-fit: cover;
+        p {
+          text-align: center
+        }
+      };
+    }
+  }
+
+  .images-transicion {
+          background-image: url(https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80);
+          height: 245px;
           background-size: cover;
-          background-repeat: no-repeat;
-          border-radius: 12px 12px 12px 12px;  
-          transition: 1.2s;
-          margin: 12px 0;
-      
-          .card-content {
-            display: none;
-            text-align: center;
-            transform: translateY(17.9vh);
-          }
+          width: auto;
+          margin: 24px 0;
+          background-position-y: -156px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
 
-          &:hover {
-            background-image: linear-gradient(7deg, #0000008f, transparent);
-            
-            .card-content {
-                display: block;
+          &::before {
+              content: "";
+              position: relative;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(0, 0, 0, 0.5);
             }
-            
-        }
-
-        &:active {
-            @extend :hover;
-        }
           
-        }
-        }
+          h1 {
+          position: absolute;
+          text-indent: 0px;
+          }
       
-        
+  }
+  
+  .computadoras {
+      .productos {
+      @extend %scroll;
+        .card {
+          @extend %card;
+          margin: 0 4%;
+    
+          .corazon {
+              display: block;
+              position: relative;
+              display: flex
+              transform translatex(-12px);
+              z-index: 32;
+          
+              justify-content: flex-end;
+    
+            &:hover {
+              background: #6c6c6c8f;
+              border-radius: 50%;
+              width: 36px;
+              height: 36px;
+            }
+          }
+    
+          svg {
+            display: inline;
+            position: relative;
+            right: -7.25px;
+            bottom: -6px;
+            fill: $pink;
+          }
+    
+          .card-image {
+            position: relative;
+            z-index: 30;
+            width: 100%;
+            height: 120px;
+            overflow: hidden;
+            border-radius: 12px 12px 0 0;
+            transform: translateY(-24px);
+    
+            img {
+              width: 100%;
+              height: auto;
+              position: relative;
+              z-index: 31;
+            }
+          }
+    
+          .card-content {
+            padding: 10px;
+            color: white;
+            width: 100%;
+            height: 122px;
+            overflow-y: scroll;
+            transform: translateY(-26.1px);
+    
+            h3 {
+              font-weight: bolder;
+              display: inline;
+            }
+    
+            p {
+              margin: 0;
+              font-size: 14px;
+              line-height: 1.2;
+            }
+          }
+        }
       }
+    }
+    
+  .oficinas {
+    
+
+    .oficinas__contenedor {
+        @include displayflex(row, wrap,space-evenly, center);
+        .oficina {
+      @extend %card;
+      background-image: url("https://img.freepik.com/foto-gratis/computadora-portatil-abierta_144627-12145.jpg?w=740&t=st=1689726663~exp=1689727263~hmac=bd0a4bd06d25877b063a376e72c969e6dfcd1505d88e7acf58109c3b75c4232d");
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 12px 12px 12px 12px;  
+      transition: 1.2s;
+      margin: 12px 0;
+  
+      .card-content {
+        display: none;
+        text-align: center;
+        transform: translateY(17.9vh);
+      }
+
+      &:hover {
+        background-image: linear-gradient(7deg, #0000008f, transparent);
+        
+        .card-content {
+            display: block;
+        }
+        
+    }
+
+    &:active {
+        @extend :hover;
+    }
+      
+    }
+    }
+  
+    
+  }
+
+  .ubicacion {
+    figure {
+      @include displayflex(row, nowrap, center, center);
+      object-fit: cover;
+      margin: 0 12%;
+      img {
+        width: 100%;
+      }
+    }
+  }
       
 }
 
@@ -316,4 +327,19 @@ footer {
     height: 200px;
     width: 100%;
     background-color: #0c181c;
+    margin-top: 12px;
+
+    .lista {
+      h3 {
+        font-weight: 500;
+      }
+    }
+
+    .redes-sociales {
+      ul {
+        @include displayflex(row, nowrap, center, center);
+        padding-bottom: 20px;
+        gap: 40px;
+      }
+    }
 }
